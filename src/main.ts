@@ -74,7 +74,8 @@ function renderDraft(): void {
   const cards = draft.sets.flatMap((set) => set.cards);
   $('#draft-cards').innerHTML = cards.length === 0
     ? '<div class="empty-draft"><span>Q</span><p>Your imported or new cards will appear here.</p></div>'
-    : cards.map((card, index) => `<article class="draft-card"><small>CARD ${index + 1}</small><strong>${escapeHtml(card.q)}</strong><p>${escapeHtml(card.a)}</p><button class="remove-card" data-card-index="${index}" aria-label="Remove card ${index + 1}">×</button></article>`).join('');
+    : cards.slice(0, 100).map((card, index) => `<article class="draft-card"><small>CARD ${index + 1}</small><strong>${escapeHtml(card.q)}</strong><p>${escapeHtml(card.a)}</p><button class="remove-card" data-card-index="${index}" aria-label="Remove card ${index + 1}">×</button></article>`).join('') +
+      (cards.length > 100 ? `<p class="studio-note">Showing the first 100 of ${cards.length} cards. The export includes every card.</p>` : '');
   document.querySelectorAll<HTMLButtonElement>('.remove-card').forEach((button) => {
     button.addEventListener('click', () => {
       const index = Number(button.dataset.cardIndex);

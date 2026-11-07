@@ -20,6 +20,8 @@ export interface PackCard {
   tags?: string[];
   img?: string;
   imgReveal?: string;
+  audio?: string;
+  audioReveal?: string;
 }
 
 export interface PackSet {

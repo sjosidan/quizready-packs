@@ -27,8 +27,11 @@ export function preparePack(document: StudyPack): StudyPack {
   document.topic.id = document.topic.id === 'pack-my-pack' ? `pack-${id}` : document.topic.id;
   document.topic.title = title;
   document.topic.tags = document.pack.tags;
-  document.sets[0].id = document.sets[0].id === 'my-pack:drills' ? `${id}:drills` : document.sets[0].id;
-  document.sets[0].title = document.sets[0].title || `${title} drills`;
+  for (const set of document.sets) {
+    if (set.id === 'my-pack:drills') set.id = `${id}:drills`;
+    else if (set.id.startsWith('my-pack:template:')) set.id = set.id.replace('my-pack:', `${id}:`);
+    if (!set.title) set.title = `${title} drills`;
+  }
   return validatePack(document);
 }
 
