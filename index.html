@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse, create, and download study and drill packs for QuizReady." />
+    <meta name="theme-color" content="#101411" />
+    <title>QuizReady Packs — make knowledge stick</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23ffb800'/%3E%3Cpath d='M18 17h20a10 10 0 0 1 0 20H28v10H18V17zm10 9v3h10a1.5 1.5 0 0 0 0-3H28z' fill='%23101411'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="QuizReady Packs home"><span class="brand-mark">Q</span><span>QuizReady <strong>Packs</strong></span></a>
+      <nav aria-label="Main navigation"><a href="#browse">Browse</a><a href="#studio">Pack Studio</a><a href="https://github.com/sjosidan/quizready">GitHub</a></nav>
+      <a class="button button-small button-outline" href="#studio">Make a pack</a>
+    </header>
+
+    <main id="top">
+      <section class="hero page-width">
+        <div class="hero-copy">
+          <p class="eyebrow">A growing library for curious minds</p>
+          <h1>A smaller app.<br /><span>A world to learn.</span></h1>
+          <p class="hero-text">Download focused study notes and drills when you want them. Keep your progress on your device and your app lightweight.</p>
+          <div class="hero-actions"><a class="button" href="#browse">Explore packs <span aria-hidden="true">→</span></a><a class="text-link" href="#studio">Build from Anki or text</a></div>
+          <div class="trust-row"><span>Offline after install</span><span>Stable progress</span><span>Open pack format</span></div>
+        </div>
+        <div class="phone-preview" aria-label="QuizReady study pack preview">
+          <div class="phone-top"><span>QUIZREADY</span><span class="phone-dot"></span></div>
+          <p class="phone-kicker">YOUR NEXT PACK</p>
+          <h2>Curious World</h2>
+          <p>Geography, science, and a little everything.</p>
+          <div class="preview-card"><span class="preview-number">01</span><div><small>DRILL</small><strong>Which river flows through Cairo?</strong></div></div>
+          <div class="preview-card muted"><span class="preview-number">02</span><div><small>STUDY</small><strong>Learn, then retrieve</strong></div></div>
+          <div class="phone-progress"><span></span></div>
+          <small class="phone-foot">8 cards · 2 chapters · yours offline</small>
+        </div>
+      </section>
+
+      <section class="catalog-section page-width" id="browse">
+        <div class="section-heading"><div><p class="eyebrow">THE LIBRARY</p><h2>Find your next subject.</h2></div><p>Curated packs plus anything you save in Pack Studio.</p></div>
+        <div class="catalog-tools"><label class="search-box"><span aria-hidden="true">⌕</span><input id="catalog-search" type="search" placeholder="Search topics, tags, or creators" autocomplete="off" /></label><div class="filter-chips" id="catalog-filters" aria-label="Pack filters"><button class="chip active" data-filter="all">All packs</button><button class="chip" data-filter="starter">Starter</button><button class="chip" data-filter="local">My packs</button></div></div>
+        <div id="catalog-status" class="inline-status" role="status">Loading the library…</div>
+        <div class="pack-grid" id="pack-grid"></div>
+      </section>
+
+      <section class="steps-section page-width">
+        <div class="section-heading"><div><p class="eyebrow">SIMPLE BY DESIGN</p><h2>From idea to recall.</h2></div></div>
+        <div class="steps"><article><span>01</span><h3>Choose or create</h3><p>Download a curated pack, import an Anki deck, or start with a simple question-and-answer list.</p></article><article><span>02</span><h3>Study and drill</h3><p>Read short chapters, practise retrieval, and build quizzes from exactly the cards you need.</p></article><article><span>03</span><h3>Keep your progress</h3><p>Stable card IDs let pack updates arrive without throwing away your learning history.</p></article></div>
+      </section>
+
+      <section class="studio-section" id="studio">
+        <div class="page-width">
+          <div class="section-heading studio-heading"><div><p class="eyebrow">PACK STUDIO</p><h2>Turn what you have<br />into something useful.</h2></div><p>Everything runs in your browser. Your deck is not uploaded to a server.</p></div>
+          <div class="studio-layout">
+            <div class="studio-controls">
+              <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Import a pack or Anki deck"><input id="file-input" type="file" accept=".apkg,.quizpack,.txt,.tsv,.csv" hidden /><span class="drop-icon" aria-hidden="true">↑</span><h3>Drop a deck here</h3><p>Anki .apkg, Anki text, CSV, TSV, or .quizpack</p><button class="button button-outline" id="choose-file" type="button">Choose a file</button><small>For modern compressed Anki decks, use Anki’s text export.</small></div>
+              <div class="form-grid">
+                <label class="field wide">Pack title<input id="meta-title" maxlength="80" placeholder="My study pack" /></label>
+                <label class="field">Creator<input id="meta-author" maxlength="60" placeholder="Your name" /></label>
+                <label class="field">Language<input id="meta-language" maxlength="12" value="en" /></label>
+                <label class="field wide">Description<textarea id="meta-description" rows="3" placeholder="What will someone learn?"></textarea></label>
+                <label class="field">License<select id="meta-license"><option>CC0-1.0</option><option>CC-BY-4.0</option><option>CC-BY-SA-4.0</option><option>All rights reserved</option></select></label>
+                <label class="field">Tags<input id="meta-tags" placeholder="science, biology" /></label>
+              </div>
+              <details class="study-editor"><summary>Add a study chapter <span>Optional</span></summary><label class="field">Chapter title<input id="note-title" placeholder="The big picture" /></label><label class="field">Study text<textarea id="note-text" rows="5" placeholder="A short explanation to read before drilling…"></textarea></label></details>
+              <div class="quick-add"><h3>Add one card</h3><div class="form-grid"><label class="field wide">Question<input id="new-question" placeholder="What do you want to remember?" /></label><label class="field wide">Answer<input id="new-answer" placeholder="The answer" /></label><label class="field">Hint<input id="new-hint" placeholder="Optional" /></label><label class="field">Accepted alternatives<input id="new-accept" placeholder="Optional, separated by |" /></label></div><button class="button button-outline" id="add-card" type="button">Add card</button></div>
+            </div>
+            <aside class="studio-preview"><div class="preview-header"><div><p class="eyebrow">LIVE PREVIEW</p><h3 id="draft-title">Untitled pack</h3></div><span id="draft-version">v1</span></div><p id="draft-description" class="draft-description">Your description will appear here.</p><div class="draft-stats" id="draft-stats">0 cards · 0 study chapters</div><div id="draft-cards" class="draft-cards"><div class="empty-draft"><span>Q</span><p>Your imported or new cards will appear here.</p></div></div><div class="studio-actions"><button class="button" id="save-pack" type="button">Save to My packs</button><button class="button button-outline" id="download-pack" type="button">Download .quizpack</button></div><p class="studio-note">Saving to My packs stores it in this browser. Download the file to back it up or share it. Only publish material you may redistribute.</p><div class="inline-status" id="studio-status" role="status"></div><button class="reset-button" id="reset-studio" type="button">Start over</button></aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="pack-dialog"><button class="dialog-close" id="close-dialog" aria-label="Close">×</button><div id="dialog-content"></div></dialog>
+    <footer class="page-width"><a class="brand" href="#top"><span class="brand-mark">Q</span><span>QuizReady <strong>Packs</strong></span></a><p>Learn lightly. Remember more.</p><a href="https://github.com/sjosidan/quizready">Open source on GitHub</a></footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

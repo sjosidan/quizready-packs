@@ -1,0 +1,133 @@
+{
+  "kind": "quizready-study-pack",
+  "formatVersion": 1,
+  "pack": {
+    "id": "curious-world",
+    "title": "Curious World Starter",
+    "description": "A small original mix of geography, science, and everyday knowledge. Includes two short study chapters and eight drills.",
+    "author": "QuizReady",
+    "version": 1,
+    "language": "en",
+    "tags": [
+      "starter",
+      "geography",
+      "science"
+    ],
+    "license": "CC0-1.0",
+    "minAppVersion": 1,
+    "updated": "2026-11-07T00:00:00Z"
+  },
+  "topic": {
+    "id": "pack-curious-world",
+    "title": "Curious World",
+    "icon": "🌍",
+    "color": "#43AA8B",
+    "tags": [
+      "starter",
+      "geography",
+      "science"
+    ]
+  },
+  "sets": [
+    {
+      "id": "curious-world:essentials",
+      "title": "Curious World essentials",
+      "tags": [
+        "starter"
+      ],
+      "cards": [
+        {
+          "id": "curious-world:card:river",
+          "q": "Which river flows through Cairo?",
+          "a": "The Nile",
+          "accept": "Nile",
+          "tags": [
+            "geography"
+          ]
+        },
+        {
+          "id": "curious-world:card:planet",
+          "q": "Which planet is known for its prominent ring system?",
+          "a": "Saturn",
+          "tags": [
+            "science",
+            "space"
+          ]
+        },
+        {
+          "id": "curious-world:card:water",
+          "q": "Which two chemical elements make up water?",
+          "a": "Hydrogen and oxygen",
+          "accept": "ordered: hydrogen + oxygen",
+          "tags": [
+            "science"
+          ]
+        },
+        {
+          "id": "curious-world:card:japan",
+          "q": "What is the capital of Japan?",
+          "a": "Tokyo",
+          "tags": [
+            "geography"
+          ]
+        },
+        {
+          "id": "curious-world:card:photosynthesis",
+          "q": "Which gas do plants absorb for photosynthesis?",
+          "a": "Carbon dioxide",
+          "accept": "CO2",
+          "tags": [
+            "science"
+          ]
+        },
+        {
+          "id": "curious-world:card:australia",
+          "q": "What is the largest city in Australia by population?",
+          "a": "Sydney",
+          "hint": "It is not the capital.",
+          "tags": [
+            "geography"
+          ]
+        },
+        {
+          "id": "curious-world:card:heart",
+          "q": "How many chambers does a typical human heart have?",
+          "a": "Four",
+          "accept": "4",
+          "tags": [
+            "science",
+            "body"
+          ]
+        },
+        {
+          "id": "curious-world:card:equator",
+          "q": "What is the name of the imaginary line at zero degrees latitude?",
+          "a": "The Equator",
+          "accept": "Equator",
+          "tags": [
+            "geography"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "id": "curious-world:note:start",
+      "title": "Start curious",
+      "chapters": [
+        {
+          "id": "curious-world:chapter:learning",
+          "title": "Learn, then retrieve",
+          "text": "Read actively, then put the material away and try to retrieve the answer. Retrieval is the useful part of a drill: it shows you what you can recall without a prompt.\n\nDo not worry about perfect first attempts. A miss is a useful signal for what to practise next."
+        },
+        {
+          "id": "curious-world:chapter:connections",
+          "title": "Make connections",
+          "text": "Facts become easier to remember when they connect to something else. Picture Cairo on the Nile, or connect the rings of Saturn with an image you have seen.\n\nUse the study notes to build context and the drills to make the details stick."
+        }
+      ]
+    }
+  ],
+  "media": {}
+}

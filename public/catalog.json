@@ -1,0 +1,28 @@
+{
+  "kind": "quizready-pack-catalog",
+  "formatVersion": 1,
+  "updated": "2026-11-07T00:00:00Z",
+  "packs": [
+    {
+      "id": "curious-world",
+      "title": "Curious World Starter",
+      "description": "A small original mix of geography, science, and everyday knowledge. Includes two short study chapters and eight drills.",
+      "author": "QuizReady",
+      "version": 1,
+      "language": "en",
+      "tags": [
+        "starter",
+        "geography",
+        "science"
+      ],
+      "license": "CC0-1.0",
+      "minAppVersion": 1,
+      "updated": "2026-11-07T00:00:00Z",
+      "url": "packs/curious-world.quizpack",
+      "size": 3766,
+      "sha256": "19ab20debc3bfeba743e96969f98cb4d719865686e24f1d4345e0eebac84daad",
+      "cardCount": 8,
+      "chapterCount": 2
+    }
+  ]
+}
