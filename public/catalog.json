@@ -29,7 +29,7 @@
       "title": "QuizReady General Knowledge Library",
       "description": "Neutral general knowledge drills, study guides, and 729 list quizzes. Download once for offline use.",
       "author": "QuizReady",
-      "version": 1,
+      "version": 2,
       "language": "en",
       "tags": [
         "general-knowledge",
@@ -39,9 +39,9 @@
       "license": "All rights reserved",
       "minAppVersion": 1,
       "updated": "2026-11-24T00:00:00Z",
-      "url": "https://github.com/sjosidan/quizready-packs/releases/download/content-v1/quizready-general-v1.quizpack",
-      "size": 640523973,
-      "sha256": "fdd12d1116485ba2f311d7931bd58479b74e68633ec097c2f297366ff5d95fdc",
+      "url": "https://github.com/sjosidan/quizready-packs/releases/download/content-v2/quizready-general-v2.quizpack",
+      "size": 640848888,
+      "sha256": "faf7ae3f51d50f3fcddc4f2fab81ac8a162fe3aa9f5549aa2dc791f4eb30a7a8",
       "cardCount": 10339,
       "chapterCount": 197
     }
