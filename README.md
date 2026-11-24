@@ -2,7 +2,8 @@
 
 The website and curated study-pack catalog for QuizReady. The app source and
 private study vault live elsewhere; this repository contains only the website
-and packs explicitly approved for redistribution. It is currently private.
+and packs explicitly approved for redistribution. Large neutral libraries are
+distributed as GitHub Release assets and are not committed to Git history.
 
 ## Run
 
